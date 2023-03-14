@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="" name="Description" />
+    <link href="lp-implant-styles.css" type="text/css" rel="stylesheet">
+    <title> </title>
+    <link rel="canonical" href="https://" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link href="https://tntwebsites.com/tnticons/css/fontello.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;300;400;500;600;700;800&family=Fira+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">    
+    <script async src='https://tag.simpli.fi/sifitag/d0839950-0d38-0137-dfb5-06a9ed4ca31b'></script>
+</head>
+
+<div id="landing-page-form" class="landing-page-quiz">
+    <h2>Implant Quiz</h2>
+    <p>Thank you for your interest in Laguna Niguel Family Dental Care. Please fill out your information in the form below and a member of our team will reach out to you soon.</p>
+    <form class="simple" method="post" action="https://tnt-adder.herokuapp.com/submit/a6d95abc-e07f-45de-b358-7c35be8862dd">
+        <div><label>Name</label> <input name="Name" placeholder="Name" required="true" type="text" /></div>
+        <div><label>Phone Number</label> <input name="Phone" placeholder="Phone Number" required="true" type="text" /></div>
+        <div><label>Email Address</label> <input name="email" placeholder="Email" required="true" type="email" /></div>
+        <div><label>Are You Affected by Any of the Following Conditions?</label>
+            <select name="missing" >
+                <option value="" hidden></option>
+                <option value="Missing a single tooth">Missing a single tooth</option>
+                <option value="Missing multiple teeth">Missing multiple teeth</option>
+                <option value="Poor-fitting traditional dentures">Poor-fitting traditional dentures</option>
+                <option value="Most teeth in bad shape">Most teeth in bad shape</option>
+            </select>
+        </div>
+        <div>
+            <label>Is There A Certain Food You Can't Enjoy Because Of Missing Teeth?</label>
+            <select name="food">
+                <option value="" hidden></option>
+                <option value="A steak dinner">A steak dinner</option>
+                <option value="Apples or other hard fruit">Apples or other hard fruit</option>
+                <option value="Popcorn, nuts, or other snacks">Popcorn, nuts, or other snacks</option>
+                <option value="Something else">Something else</option>
+            </select>
+        </div>
+        <div><label>Do You Currently Need Relief from Pain or Discomfort?</label>
+            <select name="relief">
+                <option value="" hidden></option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div>
+            <label>Do You Find Yourself Hiding Your Smile In Public?</label>
+            <select name="hiding">
+                <option value="" hidden></option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div><label>Are You Interested in a Cost-Effective Payment Plan For Financing Dental Implants?</label>
+            <select name="cost" >
+                <option value="" hidden></option>
+                <option value="$100">Yes, I could afford up to $100 per month.</option>
+                <option value="Missing multiple teeth">Yes, I could afford up to $200 per month.</option>
+                <option value="Poor-fitting traditional dentures">Yes, I could afford up to $300 per month.</option>
+                <option value="Most teeth in bad shape">I do not need a payment plan. </option>
+            </select>
+        </div>
+        <div>
+            <label>Is There Anything Keeping You from Restoring Your Smile?</label>
+            <select name="preventing">
+                <option value="" hidden></option>
+                <option value="No! I’m ready to fix my smile today">No! I’m ready to fix my smile today</option>
+                <option value="Cost of treatment">Cost of treatment</option>
+                <option value="Fear of the dentist">Fear of the dentist</option>
+                <option value="Time commitment">Time commitment</option>
+            </select>
+        </div>
+        <div class="flex-wrap" stlye="text-align: center;">
+            <input type="submit" name="submit" value="Submit" class="btn" style="margin: 10px auto;">
+        </div>     
+        <input type="hidden" name="_subject" value="Implant Quiz 2023" />
+        <input type="hidden" name="_redirect" value="thanks.html" />
+        <input type="hidden" name="token_generate" id="token_generate">
+    </form>
+</div>
+
+</body>
+</html>
