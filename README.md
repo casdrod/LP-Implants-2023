@@ -1,4 +1,4 @@
 # LP Implants 2023
  LP for Implants with quiz and review section
 
-![screenshot] (preview.png)
+![screenshot 1](preview.png)
