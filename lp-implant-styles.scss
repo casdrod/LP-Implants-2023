@@ -55,7 +55,7 @@ h2 { font: normal 50px/1.2 $font; color:  $secondary; letter-spacing: normal;  m
 h3 { font: 600 30px/1 $font2;  color:$secondary;   margin: 20px auto 0; letter-spacing: 0.15px; }
 main ul {list-style: none; padding: 0; margin: 10px auto; text-align: left; display: table;
     li {position: relative; padding-left: 35px; font-size: 24px; line-height: 1.2; margin: 10px auto;
-        &:before {content: '\e832'; font-family: fontello; position: absolute; left: 0; top: 0; color: #3CBEDC;}
+        &:before {content: '\e832'; font-family: fontello; position: absolute; left: 0; top: 0; color: $primary;}
     }
 }
 /*  --------------  Buttons ----------------- */
@@ -89,15 +89,55 @@ figcaption {
 
 
 header{position:relative;padding:0;z-index:100;background-color: #fff;
-    .locations{flex:0 1 510px;
-        > span{border-radius:25px;padding:3px 20px;text-align:center;font:500 20px/1.1 $font;letter-spacing:1.5px;text-transform:uppercase;background-color:$primary;color:#fff;display:table;margin:auto auto 10px}
-        .flex-ed{justify-content:space-around}
-    }
     address{padding:0 8px;}
     .address{display:flex;color: #000;font-size: 18px;line-height:1.25;font-weight:400;letter-spacing:.55px;margin-bottom: 10px;
         &:hover{color:$secondary}
         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
     }
+    #nav{display:flex;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;padding:10px;
+        .btn{margin:0;font-size:21px;min-width:200px;display:flex;color: $text;font-weight: 600;border-radius: 20px;text-transform:uppercase;
+            span{display:block;font-family:$font2;font-weight:700;letter-spacing:1.5px;font-size: 26px;}
+            i:before {margin-right: 10px;}
+            &:hover {color: #fff;}
+        }
+        #mobile-btns {
+			width: 100%;display:flex;
+			> * {flex: 1;height: 64px;}
+			.btn {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 10px;
+                margin: 0;
+				justify-content: center;
+				border-radius: 0;
+				font-size: 16px;
+				text-transform: uppercase;
+				span {
+					width: 100%;font-size: 28px;
+				  }
+			}
+			.phone, .btn {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+				span {
+					width: 100%;
+				}
+			  }
+			.phone {background-color: #353C3F;color: #fff;font-size: 20px;line-height: 1.3;margin-bottom: 0;
+				span {text-transform: uppercase;color: #fff;font-size: 16px;font-weight: 700;letter-spacing: 1px;}
+			}
+			#mobile-special {
+				.container {
+					margin: 10px 0;border-top: 2px solid #AFB1B1;border-bottom: 2px solid #AFB1B1;padding: 5px;
+					h4 {color: $tertiary;font-size: 22px;margin: 0;}
+					small {text-transform: uppercase;font-size: 14px;letter-spacing: .7px;font-weight: 700;}
+				}
+			}
+		}
+    }
+    
 }
 .fix-nav header{position:fixed;width:100%;left:0;top:0;right:0; animation-duration:.8s; animation-fill-mode:both; animation-name:slideIn; z-index:110; box-shadow:0 3px 7px rgba(0,0,0,0.35); padding-bottom: 10px;
     .logo img {max-height: 90px;}
@@ -105,27 +145,11 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 }
 .phone {display:flex;color:#45C9BB;font:700 41px/30px $font2;
     span{display:block;color:#000;font-size:14px;font-weight:700;text-transform:uppercase;font-family:$font2;}
-    &:hover{color:$text;}
+    &:hover{color:$primary;}
     i {display: flex;align-items: center;
         &:before {color: $primary;font-size: 22px;margin-left: 0px;margin-right: 15px;}
     }
 }
-#nav{display:flex;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;padding:10px;
-    .btn{margin:0;font-size:21px;min-width:200px;display:flex;color: $text;font-weight: 600;border-radius: 20px;text-transform:uppercase;
-        span{display:block;font-family:$font2;font-weight:700;letter-spacing:1.5px;font-size: 26px;}
-        i:before {margin-right: 10px;}
-    }
-    #mobile-btns {display: none;
-        > * {min-height: 65px;}
-        .phone {flex: 0 1 50%;line-height: 1.3;font-weight: 400;color: #000;display: flex;flex-wrap: wrap;justify-content: center;background-color: #45C9BB;align-content:center;
-            span {width: 100%;}
-        }
-        .btn {padding: 5px;font-size: 14px;align-content: center;display: flex;justify-content:center;flex-wrap: wrap;border-radius: 0; margin: 0; flex: 0 1 50%;font-weight: 700;color: #fff;background-color:$secondary; 
-            i {display:none;}
-        }
-    }
-}
-
 
 /* ------------   Split Img ------------- */
 
@@ -186,7 +210,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 #reviews { 
     max-width: 1200px; margin: 100px auto 0;
     ul { display: flex; flex-flow: column; justify-content: center; align-items: flex-start;
-    li {color: #fff; margin: 10px 0;}
+        li {color: #fff; margin: 10px 0;font-size: 28px;}
     }
     h4 {font: bold 18px/1 $font2; margin-bottom: 0; color: #fff;letter-spacing: 1.4px;text-transform:uppercase;}
     h3 {font: normal 50px/1 $font; margin: 10px auto; color: #fff;}
@@ -194,6 +218,25 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     &:first-of-type {background: $secondary;}
     > div {&.list{ flex: 0 1 660px; display: flex; flex-flow: column wrap; padding-top: 40px;}}
     }
+    .caption {
+        position: absolute;
+        bottom: 0;
+        font-size: 18px;
+        width: 100%;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        text-transform:uppercase;
+        color: $text;
+        font-family: $font;
+        text-transform: uppercase;
+        left: 50%;
+        transform: translateX(-50%);
+        a {color: $text;letter-spacing: 1.6px;
+            &:hover {color: $primary}
+        }
+      }
     #mobile-doc {display:none;}
     .flex-ed figure img {margin: 0; width: 100%;}
     .review { background: $tertiary; flex-flow: row; filter: drop-shadow(4px 4px 11px rgba(0, 0, 0, 0.23));
@@ -206,9 +249,9 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         > div { padding: 5px 10px 5px 5px; display: flex; flex-flow: column; justify-content: center;
             > * {text-align: left;}
         }
-        p { position: relative;font-size: 28px;line-height: 35px;margin: 10px auto;
+        p { position: relative;font-size: 32px;line-height: 35px;margin: 10px auto;
             &:before {  content: '\e838'; position: absolute; left: -42px;
-                top: -43px;font-family: fontello; color: #3CBEDC; font-size: 42px; -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg); }
+                top: -43px;font-family: fontello; color: $primary; font-size: 42px; -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg); }
         }
     }
 }
@@ -287,7 +330,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
             text-align: left;
             margin: auto;
             p {
-                font: 400 30px/44px $font2;
+                font: 400 30px/34px $font2;
                 margin-top: 0;
                 margin-top: 10px;
                 margin-bottom: 10px;
@@ -310,7 +353,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 
 
 /* 2nd Quiz Section */
-#quiz { padding: 75px 10px; background: #D8EDF3;
+#quiz { padding: 75px 10px; background: #F6F4F2;
     .quiz{ 
         .flex-ed {max-width: 1300px; margin: auto;}
         h2 {font: normal 40px/1 $font2;}
@@ -362,18 +405,19 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     figure {align-self: end;}}
 
 #secondary {background: $secondary; margin: 0 auto 10px; padding: 50px 20px 40px;
-    .callouts {margin-top: 0;}
+    .callouts {margin-top: 0;
+        .icon-map-marker { top: -5px; font-size: 30px; color: $primary;}
+        .portrait {  min-height: 260px;
+            &:after {width: 92%; height: 92%; border: 2px solid $primary;}
+            &:hover:after {border-color: $secondary}
+        }
+    }
     a {   flex: 0 0 255px; }
     a h3 {
         letter-spacing: 0.26px; line-height: 1.2; margin: 0 auto; color: #1a1a1a; font-weight: 500; font-family: $font; font-size: 30px;
-        star:after {color: #45C9BB}
+        star:after {color: #FFD248}
     }
     i:before {font-size: 28px;}
-    .callouts .portrait {  min-height: 260px;
-        &:after {width: 92%; height: 92%; border: 2px solid #3CBEDC;}
-        &:hover:after {border-color: $secondary}
-    }
-    .callouts .icon-map-marker { top: -5px; font-size: 30px; color: $primary;}
 }
 
 /* -------------- Team ----------------- */
@@ -391,18 +435,20 @@ footer { padding-top: 70px; background-color: $secondary;
     .flex-ed {justify-content: center; align-items: center;  padding-bottom: 30px;}
     article { 
         background-color: #fff; border-radius: 15px; text-align: center; margin: 10px; flex: 0 1 340px;padding: 10px; box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.35);}
-    .phone {font-size: 40px;color: $primary; margin: 10px auto; font-weight: 500; display: block; letter-spacing: 0.28px; font-family: $font2;
+    .phone {font-size: 40px;color: $primary; margin: 10px auto; font-weight: 700; display: block; letter-spacing: 0.28px; font-family: $font2;
         &:hover {color: $secondary; }
     }
-    .address { color: #000;font-size: 17px; line-height: 1.1; margin-top: 20px;
+    .address { color: #000;font-size: 20px; line-height: 1.1; margin-top: 20px;
         &:hover {color: $secondary; }
     }
     h3 { margin-top: 20px; margin-bottom: 20px; color: #101926; font-weight: 500; font-size: 30px; font-family: $font;}
 }
 #services, #footer-form { min-height: 430px; 
     h3 {font-size: 30px;}}
-#contact {flex: 0 1 430px;padding: 20px 10px;
-    h3 {font-size: 50px; margin-top: 20px; margin-bottom: 25px;}}
+#contact {flex: 0 1 540px;padding: 20px 10px;
+    h3 {font-size: 50px; margin-top: 20px; margin-bottom: 25px;}
+    #footer-logo {display:none;}
+}
 #map {display: table; width: 100%; border-radius: 10px; overflow: hidden;
     iframe {display: block;}
 }
@@ -489,6 +535,17 @@ hr {
 
 @media(max-width: 1040px) {
     header address a {font-size: 15px;}
+    #reviews {
+        .review-container {
+            .flex-ed {
+                .list {flex: 100%;}
+                figure {flex: 0 1 600px;
+                    margin: auto;
+                    .caption {background-color: rgba(255,255,255,0.8); padding: 5px;}
+                }
+            }
+        }
+    }
     .phone {font-size: 21px;}
     h1 {font-size: 44px;}
     h1 span {font-size: 55px;}
@@ -498,9 +555,11 @@ hr {
 @media (min-width: 1000px) {
     .phone span {display:none;}
     #mobile-reviews {display:none;}
+    #mobile-btns {
+        display: none!important;
+      }
 }
 @media(max-width: 1000px) {
-    #nav #mobile-btns {width: 100%;display: flex;align-items: center;}
     #reviews .flex-ed figure {width: 100%;}
     #reviews {
 		padding: 0;
@@ -529,16 +588,16 @@ hr {
 			margin-top: 10px;
 		}
 	}
-    #nav > .btn, #nav > #header-details {display:none!important;}
+    header #nav > .btn, #nav > #header-details {display:none!important;}
     #reviews .review {flex-flow: row wrap;}
     #reviews .flex-ed > div.list {margin: auto;}
     .review > div {align-items: center;}
     hr {display: block; max-width: 95%; }
-    #nav {flex-wrap:wrap;padding:0; -ms-flex-pack: distribute; justify-content: space-around;}
-    #nav .logo { flex: 0 1 270px; padding-top:10px; margin-left: 0; }
-    #nav .btn {margin: 10px 0 0;font-size: 16px;}
+    header #nav {flex-wrap:wrap;padding:0; -ms-flex-pack: distribute; justify-content: space-around;padding: 0;}
+    header #nav .logo { padding: 20px;margin-left: 0; }
+    header #nav .btn {margin: 10px 0 0;font-size: 16px;}
     header address {display: none;}
-    #nav #header-details {order: 1;}
+    header #nav #header-details {order: 1;}
     #banner {background: none;
         h1 {font-size: 52px; }
         article {min-width: 450px; padding: 40px 20px 50px; }
@@ -547,8 +606,8 @@ hr {
         }
         figure {display: block;}
     }
-    .split {margin: 20px auto; display: block; }
-    .split article {max-width: 100%; padding: 20px 10px;}
+    .split {margin: 20px auto; display: block; padding: 20px;}
+    .split article {max-width: 100%;}
     .split article .btn {float: none; margin: auto; display: table; }
     .split figure {margin: 20px auto;}
     .callouts {flex-wrap: wrap; max-width: 600px;}
@@ -557,9 +616,11 @@ hr {
     #secondary {padding: 15px 0;}
     #secondary a {flex: 0 0 255px;}
     footer .flex-ed {flex-wrap: wrap; max-width: 700px; margin: auto;}
-    #services {order: 1}
-    #contact {flex: 0 1 690px;}
-    #services, #footer-form {flex: 1;}
+    #services {order: -1}
+    #contact {flex: 0 1 690px;
+        h3 {font-size: 36px;}
+    }
+    #services, #footer-form {flex: 100%;}
     #team figure {max-width: 475px; margin: auto;}
     #banner figure img {display: block;}
 }
@@ -569,7 +630,11 @@ hr {
     #nav {flex-wrap: wrap; text-align: center; }   
     #nav .btn {display: table; margin: 10px 5px;}
     #reviews .review img {margin: auto;}
-    #quiz article {margin: 25px auto;}
+    #quiz {
+        padding: 45px 10px;
+        article {margin: 25px auto;}
+    }
+    footer article {margin: 20px 40px;}
     #reviews {margin: 75px 20px 60px;}
     #reviews h3 {font-size: 36px;}
     .fix-nav header {padding-bottom: 0;}
@@ -587,13 +652,19 @@ hr {
 }
 @media (max-width: 590px) {
     figcaption {width: 200px;}
-    #reviews ul {padding: 15px;}
-    #reviews .review > div {padding-left: 60px;}
-    #nav .logo {margin-bottom: 20px; max-width: 90%;}
+    #nav .logo { max-width: 90%;}
     #banner h1 {font-size: 42px;}
     h1 span { font-size: 42px; margin: 10px;}
-    #reviews #mobile-doc {display:block!important;}
-    #reviews .flex-ed figure img:first-of-type {display:none!important;}
+    #reviews {
+        .flex-ed {
+            .list {
+                ul {padding: 15px;
+                    li {font-size: 21px;}
+                }
+            }
+        }
+        .review > div {padding-left: 60px;}
+    }
     #banner h1 small {font-size: 28px;}
     #banner article {min-width: 300px;margin-top: 0;}
     #banner article div {line-height: 1.1;}
@@ -602,12 +673,12 @@ hr {
     h2 { margin-top: 20px; font-size: 34px; }
     .split h2 {position: relative;padding-bottom:15px;}
     .split h2:after {content: '';position:absolute; bottom: 0; width: 125px; height: 2px;margin: 0 auto;right: 0;left:0;background-color: #000;}
-    .split figure {padding: 0 10px;}
     .split article p {text-align: center; padding: 0 10px;}
 	.copy {padding: 40px 10px 25px; }
     #map {display: none;}
-    footer #contact {padding: 20px 10px;}
-    footer .flex-ed {display: block;}
+    footer #contact {padding: 20px 10px;
+        #footer-logo {display:block;}
+    }
     #landing-page-form h1 {font-size: 40px;}
     .btn {min-width: auto;max-width: 100%;}
     #banner .quiz h2 {font-size: 21px;margin-top: 0;}

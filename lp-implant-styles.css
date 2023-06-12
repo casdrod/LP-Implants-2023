@@ -438,7 +438,7 @@ main ul li:before {
   position: absolute;
   left: 0;
   top: 0;
-  color: #3CBEDC;
+  color: #0079c1;
 }
 
 /*  --------------  Buttons ----------------- */
@@ -493,24 +493,6 @@ header {
   z-index: 100;
   background-color: #fff;
 }
-header .locations {
-  flex: 0 1 510px;
-}
-header .locations > span {
-  border-radius: 25px;
-  padding: 3px 20px;
-  text-align: center;
-  font: 500 20px/1.1 "Prata", serif;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  background-color: #0079c1;
-  color: #fff;
-  display: table;
-  margin: auto auto 10px;
-}
-header .locations .flex-ed {
-  justify-content: space-around;
-}
 header address {
   padding: 0 8px;
 }
@@ -531,6 +513,98 @@ header .address i:before {
   font-size: 22px;
   margin-left: -10px;
   margin-right: 15px;
+}
+header #nav {
+  display: flex;
+  max-width: 1350px;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  padding: 10px;
+}
+header #nav .btn {
+  margin: 0;
+  font-size: 21px;
+  min-width: 200px;
+  display: flex;
+  color: #231f20;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+header #nav .btn span {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 26px;
+}
+header #nav .btn i:before {
+  margin-right: 10px;
+}
+header #nav .btn:hover {
+  color: #fff;
+}
+header #nav #mobile-btns {
+  width: 100%;
+  display: flex;
+}
+header #nav #mobile-btns > * {
+  flex: 1;
+  height: 64px;
+}
+header #nav #mobile-btns .btn {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+  justify-content: center;
+  border-radius: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+header #nav #mobile-btns .btn span {
+  width: 100%;
+  font-size: 28px;
+}
+header #nav #mobile-btns .phone, header #nav #mobile-btns .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+header #nav #mobile-btns .phone span, header #nav #mobile-btns .btn span {
+  width: 100%;
+}
+header #nav #mobile-btns .phone {
+  background-color: #353C3F;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.3;
+}
+header #nav #mobile-btns .phone span {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+header #nav #mobile-btns #mobile-special .container {
+  margin: 10px 0;
+  border-top: 2px solid #AFB1B1;
+  border-bottom: 2px solid #AFB1B1;
+  padding: 5px;
+}
+header #nav #mobile-btns #mobile-special .container h4 {
+  color: #D8EDF3;
+  font-size: 22px;
+  margin: 0;
+}
+header #nav #mobile-btns #mobile-special .container small {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-weight: 700;
 }
 
 .fix-nav header {
@@ -567,7 +641,7 @@ header .address i:before {
   font-family: "Roboto", sans-serif;
 }
 .phone:hover {
-  color: #231f20;
+  color: #0079c1;
 }
 .phone i {
   display: flex;
@@ -578,72 +652,6 @@ header .address i:before {
   font-size: 22px;
   margin-left: 0px;
   margin-right: 15px;
-}
-
-#nav {
-  display: flex;
-  max-width: 1350px;
-  justify-content: space-between;
-  margin: auto;
-  align-items: center;
-  padding: 10px;
-}
-#nav .btn {
-  margin: 0;
-  font-size: 21px;
-  min-width: 200px;
-  display: flex;
-  color: #231f20;
-  font-weight: 600;
-  border-radius: 20px;
-  text-transform: uppercase;
-}
-#nav .btn span {
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  font-size: 26px;
-}
-#nav .btn i:before {
-  margin-right: 10px;
-}
-#nav #mobile-btns {
-  display: none;
-}
-#nav #mobile-btns > * {
-  min-height: 65px;
-}
-#nav #mobile-btns .phone {
-  flex: 0 1 50%;
-  line-height: 1.3;
-  font-weight: 400;
-  color: #000;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #45C9BB;
-  align-content: center;
-}
-#nav #mobile-btns .phone span {
-  width: 100%;
-}
-#nav #mobile-btns .btn {
-  padding: 5px;
-  font-size: 14px;
-  align-content: center;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-radius: 0;
-  margin: 0;
-  flex: 0 1 50%;
-  font-weight: 700;
-  color: #fff;
-  background-color: #2B333C;
-}
-#nav #mobile-btns .btn i {
-  display: none;
 }
 
 /* ------------   Split Img ------------- */
@@ -839,6 +847,7 @@ header .address i:before {
 #reviews ul li {
   color: #fff;
   margin: 10px 0;
+  font-size: 28px;
 }
 #reviews h4 {
   font: bold 18px/1 "Roboto", sans-serif;
@@ -864,6 +873,29 @@ header .address i:before {
   display: flex;
   flex-flow: column wrap;
   padding-top: 40px;
+}
+#reviews .caption {
+  position: absolute;
+  bottom: 0;
+  font-size: 18px;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  text-transform: uppercase;
+  color: #231f20;
+  font-family: "Prata", serif;
+  text-transform: uppercase;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#reviews .caption a {
+  color: #231f20;
+  letter-spacing: 1.6px;
+}
+#reviews .caption a:hover {
+  color: #0079c1;
 }
 #reviews #mobile-doc {
   display: none;
@@ -911,7 +943,7 @@ header .address i:before {
 }
 #reviews .review p {
   position: relative;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 35px;
   margin: 10px auto;
 }
@@ -921,7 +953,7 @@ header .address i:before {
   left: -42px;
   top: -43px;
   font-family: fontello;
-  color: #3CBEDC;
+  color: #0079c1;
   font-size: 42px;
   transform: rotateZ(180deg);
 }
@@ -991,7 +1023,7 @@ header .address i:before {
   margin: auto;
 }
 #mobile-reviews .review-container .comment p {
-  font: 400 30px/44px "Roboto", sans-serif;
+  font: 400 30px/34px "Roboto", sans-serif;
   margin-top: 0;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1011,7 +1043,7 @@ header .address i:before {
 /* 2nd Quiz Section */
 #quiz {
   padding: 75px 10px;
-  background: #D8EDF3;
+  background: #F6F4F2;
 }
 #quiz .quiz .flex-ed {
   max-width: 1300px;
@@ -1217,6 +1249,22 @@ header .address i:before {
 #secondary .callouts {
   margin-top: 0;
 }
+#secondary .callouts .icon-map-marker {
+  top: -5px;
+  font-size: 30px;
+  color: #0079c1;
+}
+#secondary .callouts .portrait {
+  min-height: 260px;
+}
+#secondary .callouts .portrait:after {
+  width: 92%;
+  height: 92%;
+  border: 2px solid #0079c1;
+}
+#secondary .callouts .portrait:hover:after {
+  border-color: #2B333C;
+}
 #secondary a {
   flex: 0 0 255px;
 }
@@ -1230,26 +1278,10 @@ header .address i:before {
   font-size: 30px;
 }
 #secondary a h3 star:after {
-  color: #45C9BB;
+  color: #FFD248;
 }
 #secondary i:before {
   font-size: 28px;
-}
-#secondary .callouts .portrait {
-  min-height: 260px;
-}
-#secondary .callouts .portrait:after {
-  width: 92%;
-  height: 92%;
-  border: 2px solid #3CBEDC;
-}
-#secondary .callouts .portrait:hover:after {
-  border-color: #2B333C;
-}
-#secondary .callouts .icon-map-marker {
-  top: -5px;
-  font-size: 30px;
-  color: #0079c1;
 }
 
 /* -------------- Team ----------------- */
@@ -1305,7 +1337,7 @@ footer .phone {
   font-size: 40px;
   color: #0079c1;
   margin: 10px auto;
-  font-weight: 500;
+  font-weight: 700;
   display: block;
   letter-spacing: 0.28px;
   font-family: "Roboto", sans-serif;
@@ -1315,7 +1347,7 @@ footer .phone:hover {
 }
 footer .address {
   color: #000;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.1;
   margin-top: 20px;
 }
@@ -1339,13 +1371,16 @@ footer h3 {
 }
 
 #contact {
-  flex: 0 1 430px;
+  flex: 0 1 540px;
   padding: 20px 10px;
 }
 #contact h3 {
   font-size: 50px;
   margin-top: 20px;
   margin-bottom: 25px;
+}
+#contact #footer-logo {
+  display: none;
 }
 
 #map {
@@ -1608,13 +1643,11 @@ hr {
   #mobile-reviews {
     display: none;
   }
+  #mobile-btns {
+    display: none !important;
+  }
 }
 @media (max-width: 1000px) {
-  #nav #mobile-btns {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
   #reviews .flex-ed figure {
     width: 100%;
   }
@@ -1644,7 +1677,7 @@ hr {
   #google > div {
     margin-top: 10px;
   }
-  #nav > .btn, #nav > #header-details {
+  header #nav > .btn, #nav > #header-details {
     display: none !important;
   }
   #reviews .review {
@@ -1660,24 +1693,24 @@ hr {
     display: block;
     max-width: 95%;
   }
-  #nav {
+  header #nav {
     flex-wrap: wrap;
     padding: 0;
     justify-content: space-around;
+    padding: 0;
   }
-  #nav .logo {
-    flex: 0 1 270px;
-    padding-top: 10px;
+  header #nav .logo {
+    padding: 20px;
     margin-left: 0;
   }
-  #nav .btn {
+  header #nav .btn {
     margin: 10px 0 0;
     font-size: 16px;
   }
   header address {
     display: none;
   }
-  #nav #header-details {
+  header #nav #header-details {
     order: 1;
   }
   #banner {
@@ -1703,10 +1736,10 @@ hr {
   .split {
     margin: 20px auto;
     display: block;
+    padding: 20px;
   }
   .split article {
     max-width: 100%;
-    padding: 20px 10px;
   }
   .split article .btn {
     float: none;
@@ -1741,13 +1774,16 @@ hr {
     margin: auto;
   }
   #services {
-    order: 1;
+    order: -1;
   }
   #contact {
     flex: 0 1 690px;
   }
+  #contact h3 {
+    font-size: 36px;
+  }
   #services, #footer-form {
-    flex: 1;
+    flex: 100%;
   }
   #team figure {
     max-width: 475px;
@@ -1774,8 +1810,14 @@ hr {
   #reviews .review img {
     margin: auto;
   }
+  #quiz {
+    padding: 45px 10px;
+  }
   #quiz article {
     margin: 25px auto;
+  }
+  footer article {
+    margin: 20px 40px;
   }
   #reviews {
     margin: 75px 20px 60px;
@@ -1821,12 +1863,6 @@ hr {
   figcaption {
     width: 200px;
   }
-  #reviews ul {
-    padding: 15px;
-  }
-  #reviews .review > div {
-    padding-left: 60px;
-  }
   #nav .logo {
     margin-bottom: 20px;
     max-width: 90%;
@@ -1838,11 +1874,14 @@ hr {
     font-size: 42px;
     margin: 10px;
   }
-  #reviews #mobile-doc {
-    display: block !important;
+  #reviews .flex-ed .list ul {
+    padding: 15px;
   }
-  #reviews .flex-ed figure img:first-of-type {
-    display: none !important;
+  #reviews .flex-ed .list ul li {
+    font-size: 21px;
+  }
+  #reviews .review > div {
+    padding-left: 60px;
   }
   #banner h1 small {
     font-size: 28px;
@@ -1879,9 +1918,6 @@ hr {
     left: 0;
     background-color: #000;
   }
-  .split figure {
-    padding: 0 10px;
-  }
   .split article p {
     text-align: center;
     padding: 0 10px;
@@ -1895,8 +1931,8 @@ hr {
   footer #contact {
     padding: 20px 10px;
   }
-  footer .flex-ed {
-    display: block;
+  footer #contact #footer-logo {
+    display: none;
   }
   #landing-page-form h1 {
     font-size: 40px;
