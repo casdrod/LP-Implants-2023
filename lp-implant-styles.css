@@ -503,7 +503,6 @@ header .address {
   line-height: 1.25;
   font-weight: 400;
   letter-spacing: 0.55px;
-  margin-bottom: 10px;
 }
 header .address:hover {
   color: #2B333C;
@@ -545,6 +544,12 @@ header #nav .btn i:before {
 header #nav .btn:hover {
   color: #fff;
 }
+header #nav .phone {
+  margin-bottom: 10px;
+}
+header #nav .phone:hover {
+  color: #0079c1;
+}
 header #nav #mobile-btns {
   width: 100%;
   display: flex;
@@ -581,6 +586,7 @@ header #nav #mobile-btns .phone {
   color: #fff;
   font-size: 20px;
   line-height: 1.3;
+  margin-bottom: 0;
 }
 header #nav #mobile-btns .phone span {
   text-transform: uppercase;
@@ -709,7 +715,7 @@ header #nav #mobile-btns #mobile-special .container small {
 #banner h1 {
   font: normal 50px/1 "Prata", serif;
   color: #000;
-  margin: 0 auto 30px;
+  margin: 30px auto;
 }
 #banner h1 small {
   font-size: 32px;
@@ -720,12 +726,13 @@ header #nav #mobile-btns #mobile-special .container small {
 #banner .quiz .flex-ed {
   max-width: 1300px;
   margin: auto;
+  padding-bottom: 15px;
   flex-flow: column wrap;
   align-content: center;
   gap: 25px;
 }
 #banner .quiz h2 {
-  font: normal 35px/1 "Roboto", sans-serif;
+  font: normal 32px/1 "Roboto", sans-serif;
 }
 #banner .quiz p.note {
   font: normal 18px/1 "Prata", serif;
@@ -733,10 +740,10 @@ header #nav #mobile-btns #mobile-special .container small {
   text-transform: uppercase;
 }
 #banner .quiz article {
-  width: 550px;
+  width: 530px;
   background: #fff;
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.46));
-  padding: 30px 10px;
+  padding: 15px 10px;
 }
 #banner figure figcaption {
   position: absolute;
@@ -989,7 +996,7 @@ header #nav #mobile-btns #mobile-special .container small {
   padding: 5px 0;
 }
 #mobile-reviews .review-container #google > div {
-  margin-top: 15px;
+  margin-top: 50px;
   padding: 5px 25px;
 }
 #mobile-reviews .review-container #google p {
@@ -1620,6 +1627,17 @@ hr {
   header address a {
     font-size: 15px;
   }
+  #reviews .review-container .flex-ed .list {
+    flex: 100%;
+  }
+  #reviews .review-container .flex-ed figure {
+    flex: 0 1 600px;
+    margin: auto;
+  }
+  #reviews .review-container .flex-ed figure .caption {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+  }
   .phone {
     font-size: 21px;
   }
@@ -1814,7 +1832,7 @@ hr {
     padding: 45px 10px;
   }
   #quiz article {
-    margin: 25px auto;
+    margin: 5px auto;
   }
   footer article {
     margin: 20px 40px;
@@ -1864,7 +1882,6 @@ hr {
     width: 200px;
   }
   #nav .logo {
-    margin-bottom: 20px;
     max-width: 90%;
   }
   #banner h1 {
@@ -1932,7 +1949,7 @@ hr {
     padding: 20px 10px;
   }
   footer #contact #footer-logo {
-    display: none;
+    display: block;
   }
   #landing-page-form h1 {
     font-size: 40px;
@@ -1959,9 +1976,6 @@ hr {
   }
   #quiz article {
     padding: 20px 10px;
-  }
-  #quiz article:last-of-type h2 {
-    margin-bottom: 0;
   }
 }
 @media (max-width: 400px) {

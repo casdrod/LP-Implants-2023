@@ -90,7 +90,7 @@ figcaption {
 
 header{position:relative;padding:0;z-index:100;background-color: #fff;
     address{padding:0 8px;}
-    .address{display:flex;color: #000;font-size: 18px;line-height:1.25;font-weight:400;letter-spacing:.55px;margin-bottom: 10px;
+    .address{display:flex;color: #000;font-size: 18px;line-height:1.25;font-weight:400;letter-spacing:.55px;
         &:hover{color:$secondary}
         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
     }
@@ -99,6 +99,9 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
             span{display:block;font-family:$font2;font-weight:700;letter-spacing:1.5px;font-size: 26px;}
             i:before {margin-right: 10px;}
             &:hover {color: #fff;}
+        }
+        .phone {margin-bottom: 10px;
+            &:hover {color: $primary;}
         }
         #mobile-btns {
 			width: 100%;display:flex;
@@ -172,14 +175,14 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 
 #banner { display: flex; flex-flow: row wrap;
     > * {flex: 1 0 50%;}
-    h1 {font: normal 50px/1 $font; color: #000; margin: 0 auto 30px;
+    h1 {font: normal 50px/1 $font; color: #000; margin: 30px auto;
         small {font-size: 32px; display: block; margin-top: 15px; letter-spacing: 0.8px;}
     }
     .quiz{
-        .flex-ed {max-width: 1300px; margin: auto; flex-flow: column wrap; align-content: center; gap: 25px;}
-        h2 {font: normal 35px/1 $font2; }
+        .flex-ed {max-width: 1300px; margin: auto; padding-bottom: 15px;flex-flow: column wrap; align-content: center; gap: 25px;}
+        h2 {font: normal 32px/1 $font2; }
         p {&.note{font: normal 18px/1 $font; color: grey; text-transform: uppercase;}}
-        article {width: 550px; background: #fff; filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.46)); padding: 30px 10px;}
+        article {width: 530px; background: #fff; filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.46)); padding: 15px 10px;}
     }   
     figure figcaption { position: absolute; bottom: 0; font-size: 14px; font-weight: 700; margin-top: 5px; padding: 10px; width: 370px; text-align: center; letter-spacing: 0.1em; background-color: rgba(0, 0, 0, .9); text-transform: uppercase; right: 50px; color: white; 
         a {color: white; &:hover {color:$primary}}
@@ -298,7 +301,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
                 padding: 5px 0;
             }
             >div {
-                margin-top: 15px;
+                margin-top: 50px;
                 padding: 5px 25px;
             }
             p {
@@ -632,7 +635,7 @@ hr {
     #reviews .review img {margin: auto;}
     #quiz {
         padding: 45px 10px;
-        article {margin: 25px auto;}
+        article {margin: 5px auto;}
     }
     footer article {margin: 20px 40px;}
     #reviews {margin: 75px 20px 60px;}
@@ -687,7 +690,6 @@ hr {
     #options h2 {font-size: 50px;}
     #quiz .quiz h2 {font-size: 30px;}
     #quiz article {padding: 20px 10px;}
-    #quiz article:last-of-type h2 {margin-bottom: 0;}
 }
 
 @media (max-width: 400px) {
