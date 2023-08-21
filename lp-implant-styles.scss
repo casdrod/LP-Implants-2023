@@ -366,7 +366,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         article { display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;padding: 40px 10px; margin-left: 20px;  z-index: 1; -webkit-box-flex: 0; -ms-flex: 0 1 610px; flex: 0 1 610px;
+            align-items: center;padding: 30px 10px; margin-left: 20px;  z-index: 1; -webkit-box-flex: 0; -ms-flex: 0 1 610px; flex: 0 1 610px;
             &:last-of-type h2 {margin-bottom: -10px;}
             div {background-color: #231f20; font: 400 24px/41px $font; letter-spacing: 1.2px; color: #fff; text-align: center; border-top: 5px solid rgba(206, 216, 255, .5); border-bottom: 5px solid rgba(206, 216, 255, .5); max-width: 585px; margin: auto; padding: 5px 0; letter-spacing: 2.5px;
                 span {  display: block; text-transform: none; font-family: $font; font-weight: 500; margin: 0 auto 0; font-size: 42px; letter-spacing: 0.03em; line-height: 1.11; color: #86e2ff;
