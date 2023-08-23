@@ -1078,9 +1078,6 @@ header #nav #mobile-btns #mobile-special .container small {
   z-index: 1;
   flex: 0 1 610px;
 }
-#quiz article:last-of-type h2 {
-  margin-bottom: -10px;
-}
 #quiz article div {
   background-color: #231f20;
   font: 400 24px/41px "Prata", serif;
@@ -1875,6 +1872,9 @@ hr {
   .quiz .flex-ed {
     flex-flow: row wrap;
     gap: 20px;
+  }
+  footer .address {
+    margin-top: 0;
   }
 }
 @media (max-width: 590px) {
