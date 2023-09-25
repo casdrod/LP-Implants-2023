@@ -519,6 +519,35 @@ footer { padding-top: 70px; background-color: $secondary;
 #landing-page-form.landing-page-quiz .simple label{display:block;margin-top:30px;margin-bottom:5px;text-align:left;padding-left:20px;font-weight:600;text-transform:uppercase}
 #landing-page-form.landing-page-quiz select {width: 90%;}
 
+
+/* -- quiz page -- */
+.page_lp-implants-2023-quiz #footer-content .simple, .page_lp-implant-2023-quiz #footer-content .line:first-of-type {display:none;}
+.page_lp-implants-2023-quiz #footer-content {max-width: 1000px;}
+.page_lp-implants-2023-quiz h1 {margin-top: 30px;margin-bottom: 10px;}
+.page_lp-implants-2023-quiz h1 + p {max-width: 700px;margin: 20px auto;padding: 10px;}
+#implant-quiz form {max-width: 700px;margin: auto auto 50px;}
+#implant-quiz form > div:nth-of-type(1), #implant-quiz form > div:nth-of-type(2) {display: flex;
+    flex-wrap: wrap;}
+#implant-quiz form input[type="text"] {padding: 10px;flex: 0 1 48%;margin: 10px auto;}
+#implant-quiz form input[type="text"]::placeholder {font-size: 18px;}
+#implant-quiz form label {font-size: 22px;font-weight: 600;width: 100%;text-align: left;}
+#implant-quiz .answers {width: 100%;text-align: left;}
+#implant-quiz .answers span {display: block;margin: 10px;font-size: 22px;}
+#implant-quiz .answers span input {margin-right: 10px;}
+#implant-quiz #history .answers {display: flex;flex-wrap: wrap;justify-content: flex-end;}
+#implant-quiz #history .answers span {margin: 10px 25px;}
+#implant-quiz #questions > div {display: flex;justify-content: space-between;flex-wrap: wrap;margin: 50px auto;}
+@media (max-width: 1000px) {
+    #implant-quiz form {padding: 10px;}
+}
+@media (max-width: 600px) {
+    #implant-quiz form label {margin: auto;}
+    #implant-quiz .answers {width: 100%;}
+    #implant-quiz .answers span {margin: 20px 0;display:block;width: 100%;}
+}
+
+
+
 hr {
     border-bottom: 1px solid rgba(151,151,151,.74);
     box-shadow: 5px 1px 1px rgba(14, 14, 15, 0.35);
