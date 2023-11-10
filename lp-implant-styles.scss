@@ -4,24 +4,28 @@
 .animated{-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@-webkit-keyframes slideIn{from{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes slideIn{from{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}
 /* ---------------- Global Styles  ---------------- */
 
+$primary: #1775C7;
+$secondary: #1D252C;
+$tertiary: #F0F0F0;
+$btn: #1775C7;
+$font: 'DM Serif Display', serif;
+$font2: 'Jost', sans-serif;
+$text: #231f20;
+
 .flex-ed, .col-flex-ed { display: -webkit-box; display: -ms-flexbox; display: flex; }
 .flex-ed { -webkit-box-orient: horizontal; -webkit-box-direction: normal;  }
 .col-flex-ed{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-flow:column;-ms-flex-flow:column}
 star{line-height:1;margin:7px auto;display:block}
-star:after{font-size:22px;font-family:'fontello';font-weight:400;margin:0;font-style:normal;content:'\e80f \e80f \e80f \e80f \e80f';color: #e0b828;padding:0 10px; letter-spacing: 8.8px;}
-
-$primary: #0079c1;
-$secondary: #2B333C;
-$tertiary: #D8EDF3;
-$btn: #45C9BB;
-$font: 'Prata', serif;
-$font2: 'Roboto', sans-serif;
-$text: #231f20;
+star:after{font-size:22px;font-family:'fontello';font-weight:400;margin:0;font-style:normal;content:'\e80f \e80f \e80f \e80f \e80f';color: $primary;padding:0 10px; letter-spacing: 8.8px;}
 
 
 /* -------  Fixed Tabs ------------ */
 #fixed-tabs {position: fixed;bottom: 0; right: 0; width: 100%;  text-align: center; line-height: 1; display: flex; z-index: 150;}
-#fixed-tabs a {  font-size: 13px; color: #fff; font-weight: 700; text-transform: uppercase;padding: 14px 0;  flex: 1; flex-basis: 25%; }
+#fixed-tabs a {  font-size: 16px; color: #fff; font-weight: 700; text-transform: uppercase;padding: 14px 0;  flex: 1; flex-basis: 25%; 
+    i {
+        &:before {font-size: 20px;}
+    }
+}
 #fixed-tabs a:first-of-type {flex-basis: 50%;}
 #fixed-tabs a:nth-of-type(odd) { background-color: darken($primary, 15%);}
 #fixed-tabs a:nth-of-type(even) { background-color: darken($secondary, 8%); }
@@ -45,7 +49,7 @@ body {
     color: $text;
     font: 400 18px/26px $font2;
 }
-p {  color: $text; font: 400 18px/26px $font2;}
+p {  color: $text; font: 400 22px/26px $font2;}
 a { display: inline-block; text-decoration: none; cursor: pointer; color: $primary; }
 a:hover {color: $secondary;}
 h1, h2 h3, h4, h5, h6 {font-family: $font;  text-align: center;}
@@ -65,17 +69,16 @@ main ul {list-style: none; padding: 0; margin: 10px auto; text-align: left; disp
     display: inline-block;
     cursor: pointer;
     padding: 12px 15px;
-    min-width: 310px;
+    min-width: 350px;
     text-align: center;
-    color: #000;
+    color: #fff;
     background-color: $btn;
-    border: 1px solid $btn;
     border-radius: 35px;
-    font: bold 18px/1.1 $font2;
+    font: bold 20px/1.1 $font2;
     text-transform: uppercase;
     letter-spacing: 1.8px;
     span {text-transform: uppercase; font-size: 13px;  vertical-align: middle; }
-    &:hover { background-color:$tertiary; color: #000;  }
+    &:hover { background-color:$secondary; color: #fff;}
 }
 .btn-alt {border-radius: 0;}
 
@@ -94,13 +97,16 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         &:hover{color:$secondary}
         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
     }
-    #nav{display:flex;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;padding:10px;
-        .btn{margin:0;font-size:21px;min-width:200px;display:flex;color: $text;font-weight: 600;border-radius: 20px;text-transform:uppercase;
+    #nav{display:flex;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;padding:15px;
+        .btn{margin:0;align-items: center;font-size:20px;min-width:200px;display:flex;font-weight: 600;border-radius: 30px;text-transform:uppercase;letter-spacing: normal;padding: 16px 25px 15px;
+            width: 400px;
             span{display:block;font-family:$font2;font-weight:700;letter-spacing:1.5px;font-size: 26px;}
-            i:before {margin-right: 10px;}
+            i {margin-right: 20px;margin-top: -3px;
+                &:before {margin-right: 10px;font-size: 22px;}
+            }
             &:hover {color: #fff;}
         }
-        .phone {margin-bottom: 10px;
+        .phone {margin-bottom: 15px;color: $text;
             &:hover {color: $primary;}
         }
         #mobile-btns {
@@ -111,6 +117,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 				flex-wrap: wrap;
 				padding: 10px;
                 margin: 0;
+                min-width: auto;
 				justify-content: center;
 				border-radius: 0;
 				font-size: 16px;
@@ -142,7 +149,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     }
     
 }
-.fix-nav header{position:fixed;width:100%;left:0;top:0;right:0; animation-duration:.8s; animation-fill-mode:both; animation-name:slideIn; z-index:110; box-shadow:0 3px 7px rgba(0,0,0,0.35); padding-bottom: 10px;
+.fix-nav header{position:fixed;width:100%;left:0;top:0;right:0; animation-duration:.8s; animation-fill-mode:both; animation-name:slideIn; z-index:110; box-shadow:0 3px 7px rgba(0,0,0,0.35);
     .logo img {max-height: 90px;}
     .logo {margin-bottom: 0;}
 }
@@ -190,7 +197,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     figure {
         img {margin: 0; width: 100%; height: 100%;}
     }
-    > article { display: flex; flex-flow: column wrap; justify-content: center; background-color: #D8EDF3;
+    > article { display: flex; flex-flow: column wrap; justify-content: center; background-color: $tertiary;
         div {
             span {  display: block; text-transform: none; font-family: $font; font-weight: 500; margin: 0 auto 0; font-size: 42px; letter-spacing: 0.03em; line-height: 1.11; color: #86e2ff;
                 small {display: inline-block; text-align: left; font-size: 17px; line-height: 17px; color: #86e2ff;}}
@@ -206,20 +213,20 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 /* After Banner */
 #bar {
     background: $secondary; padding: 25px 10px;
-    h3 {font: normal 30px/1 $font2; color: #fff; margin: 0;}
+    h3 {font: normal 40px/1 $font2; color: #fff; margin: 0;}
 }
 
 /* Reviews */
 #reviews { 
-    max-width: 1200px; margin: 100px auto 0;
+    max-width: 1300px; margin: 100px auto 0;
     ul { display: flex; flex-flow: column; justify-content: center; align-items: flex-start;
-        li {color: #fff; margin: 10px 0;font-size: 28px;}
+        li {color: #fff; margin: 5px 0;font-size: 28px;padding-left: 45px;}
     }
     h4 {font: bold 18px/1 $font2; margin-bottom: 0; color: #fff;letter-spacing: 1.4px;text-transform:uppercase;}
     h3 {font: normal 50px/1 $font; margin: 10px auto; color: #fff;}
     .flex-ed{ flex-flow: row wrap; justify-content: space-between;
     &:first-of-type {background: $secondary;}
-    > div {&.list{ flex: 0 1 660px; display: flex; flex-flow: column wrap; padding-top: 40px;}}
+    > div {&.list{ flex: 0 1 660px; display: flex; flex-flow: column wrap; padding: 30px 0;}}
     }
     .caption {
         position: absolute;
@@ -232,7 +239,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         padding: 10px;
         text-transform:uppercase;
         color: $text;
-        font-family: $font;
+        font-family: $font2;
         text-transform: uppercase;
         left: 50%;
         transform: translateX(-50%);
@@ -243,18 +250,20 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     #mobile-doc {display:none;}
     .flex-ed figure img {margin: 0; width: 100%;}
     .review { background: $tertiary; flex-flow: row; filter: drop-shadow(4px 4px 11px rgba(0, 0, 0, 0.23));
-        h5 {font: normal 30px/1 $font; margin: 0}
+        h5 {font: normal 30px/1 $font2; margin: 0 0 10px;}
         img {padding: 50px; margin: 0;}
         author {
             color: #121618; text-align: left; font-size: 15px; line-height: 1; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; display: flex;  align-items: center; justify-content: flex-start; 
         img {padding: 0;}
         }
-        > div { padding: 5px 10px 5px 5px; display: flex; flex-flow: column; justify-content: center;
+        > div { padding: 10px; display: flex; flex-flow: column; justify-content: center;max-width: 1100px;
+            margin: 50px auto;
             > * {text-align: left;}
         }
         p { position: relative;font-size: 32px;line-height: 35px;margin: 10px auto;
-            &:before {  content: '\e838'; position: absolute; left: -42px;
-                top: -43px;font-family: fontello; color: $primary; font-size: 42px; -webkit-transform: rotateZ(180deg); transform: rotateZ(180deg); }
+            &:after {  content: '\e838'; position: absolute;right: 0px; top: 56px; font-family: fontello; color: #1775C7;font-size: 270px;
+                transform: rotateZ(180deg);
+                opacity: 0.1;}
         }
     }
 }
@@ -358,22 +367,22 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
 /* 2nd Quiz Section */
 #quiz { padding: 75px 10px; background: #F6F4F2;
     .quiz{ 
-        .flex-ed {max-width: 1300px; margin: auto;}
+        .flex-ed {max-width: 1300px; margin: auto;justify-content: space-around;}
         h2 {font: normal 40px/1 $font2;}
         p {&.note{font: normal 18px/1 $font; color: grey; text-transform: uppercase;}}
         article {background: #fff; filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.46));}
         }
-        article { display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;padding: 30px 10px; margin-left: 20px;  z-index: 1; -webkit-box-flex: 0; -ms-flex: 0 1 610px; flex: 0 1 610px;
-            // &:last-of-type h2 {margin-bottom: -10px;}
-            div {background-color: #231f20; font: 400 24px/41px $font; letter-spacing: 1.2px; color: #fff; text-align: center; border-top: 5px solid rgba(206, 216, 255, .5); border-bottom: 5px solid rgba(206, 216, 255, .5); max-width: 585px; margin: auto; padding: 5px 0; letter-spacing: 2.5px;
-                span {  display: block; text-transform: none; font-family: $font; font-weight: 500; margin: 0 auto 0; font-size: 42px; letter-spacing: 0.03em; line-height: 1.11; color: #86e2ff;
-                    small {display: inline-block; text-align: left; font-size: 17px; line-height: 17px; color: #86e2ff;}}
-                small {font-size: 28px; font-family: $font; font-weight: 700; letter-spacing: .05em; display: block; color: #fff;}
-            }
+    article { display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;padding: 30px 10px; margin-left: 20px;  z-index: 1; -webkit-box-flex: 0; -ms-flex: 0 1 590px; flex: 0 1 590px;
+        // &:last-of-type h2 {margin-bottom: -10px;}
+        div {background-color: #231f20; font: 400 24px/41px $font; letter-spacing: 1.2px; color: #fff; text-align: center; border-top: 5px solid rgba(206, 216, 255, .5); border-bottom: 5px solid rgba(206, 216, 255, .5); max-width: 585px; margin: auto; padding: 5px 0; letter-spacing: 2.5px;
+            span {  display: block; text-transform: none; font-family: $font; font-weight: 500; margin: 0 auto 0; font-size: 42px; letter-spacing: 0.03em; line-height: 1.11; color: #86e2ff;
+                small {display: inline-block; text-align: left; font-size: 17px; line-height: 17px; color: #86e2ff;}}
+            small {font-size: 28px; font-family: $font; font-weight: 700; letter-spacing: .05em; display: block; color: #fff;}
         }
+    }
 }
 
 /* ---------------- Callouts Styles  ---------------- */
@@ -396,7 +405,7 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
     > .flex-ed {justify-content: space-around;flex-wrap:wrap;}
     h2 {font-size: 60px;margin-bottom: 25px;}
     .col{background-color:transparent; z-index: 105;
-        h3 {font-size: 30px; color: $text; letter-spacing: normal; font-family: $font; font-weight: normal; margin: 0 0 25px;}
+        h3 {font-size: 30px; color: $text; letter-spacing: normal; font-family: $font2; font-weight: normal; margin: 0 0 25px;}
         .portrait {box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             &:after {color: white;}}
         &:last-of-type h3 {margin: 0 -20px 25px;}
@@ -415,13 +424,17 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
             &:hover:after {border-color: $secondary}
         }
     }
-    a {   flex: 0 0 255px; }
+    a {   flex: 0 0 255px;
+        &:hover {
+            star:after {color: $secondary;}
+        }
+    }
     a h3 {
         letter-spacing: 0.26px; line-height: 1.2; margin: 0 auto; color: #1a1a1a; font-weight: 500; font-family: $font; font-size: 30px;
-        star:after {color: #FFD248}
+        star:after {color: $primary;}
+        }
     }
     i:before {font-size: 28px;}
-}
 
 /* -------------- Team ----------------- */
 #team {
@@ -442,9 +455,9 @@ footer { padding-top: 70px; background-color: $secondary;
         &:hover {color: $secondary; }
     }
     .address { color: #000;font-size: 20px; line-height: 1.1; margin-top: 20px;
-        &:hover {color: $secondary; }
+        &:hover {color: $primary; }
     }
-    h3 { margin-top: 20px; margin-bottom: 20px; color: #101926; font-weight: 500; font-size: 30px; font-family: $font;}
+    h3 { margin-top: 20px; margin-bottom: 20px; color: #101926; font-weight: 400; font-size: 30px; font-family: $font2;}
 }
 #services, #footer-form { min-height: 430px; 
     h3 {font-size: 30px;}}
@@ -459,7 +472,7 @@ footer { padding-top: 70px; background-color: $secondary;
 #services {  order: -1;
     ul { margin-top: 20px; padding-left: 0; margin-bottom: 10px;}
     li { margin: 10px auto; list-style: none; text-align: center;  border: 1px solid $primary; background-color: $btn;
-        a { display: block; color: #000; font-weight: 700; font-family: $font2;  font-size: 18px; text-transform: uppercase; letter-spacing: 1.8px; padding: 25px 20px 22px;}
+        a { display: block; color: #fff; font-weight: 700; font-family: $font2;  font-size: 18px; text-transform: uppercase; letter-spacing: 1.8px; padding: 25px 20px 22px;}
         &:hover {background-color: $secondary; 
             a {color: white;}}
     }
@@ -485,8 +498,8 @@ footer { padding-top: 70px; background-color: $secondary;
 
 .copy {  font: 400 18px/1.4 $font2; color: #fff;  margin-top: 20px; text-align: center; padding:10px 0 60px; 
    span {padding: 0 5px;}
-   a { margin: auto;  color: #45C9BB;
-       &:hover { color: $primary;}
+   a { margin: auto;  color: $primary;
+       &:hover { color: #fff;}
     }
 }
 
@@ -647,7 +660,9 @@ hr {
     #choice figure {margin-bottom: 0;}
     #secondary {padding: 15px 0;}
     #secondary a {flex: 0 0 255px;}
-    footer .flex-ed {flex-wrap: wrap; max-width: 700px; margin: auto;}
+    footer .flex-ed {flex-wrap: wrap; max-width: 700px; margin: auto;padding-bottom: 0;
+        .phone {font-size: 32px;}
+    }
     #services {order: -1}
     #contact {flex: 0 1 690px;
         h3 {font-size: 36px;}
@@ -655,8 +670,11 @@ hr {
     #services, #footer-form {flex: 100%;}
     #team figure {max-width: 475px; margin: auto;}
     #banner figure img {display: block;}
+    .copy {margin-top: 0;}
 }
-
+@media (max-width: 790px) {
+    #reviews .review-container .flex-ed figure .caption {display:none;}
+}
 @media (max-width: 740px) {
     #nav .logo { margin-top: 0px; max-width: 100%; flex: 1 1 100%;}
     #nav {flex-wrap: wrap; text-align: center; }   
@@ -685,14 +703,15 @@ hr {
 }
 @media (max-width: 590px) {
     figcaption {width: 200px;}
+    #bar {padding: 15px 10px;}
     #nav .logo { max-width: 90%;}
-    #banner h1 {font-size: 42px;}
+    #banner h1 {font-size: 40px;}
     h1 span { font-size: 42px; margin: 10px;}
     #reviews {
         .flex-ed {
             .list {
                 ul {padding: 15px;
-                    li {font-size: 21px;}
+                    li {font-size: 24px;}
                 }
             }
         }
@@ -706,8 +725,8 @@ hr {
     h2 { margin-top: 20px; font-size: 34px; }
     .split h2 {position: relative;padding-bottom:15px;}
     .split h2:after {content: '';position:absolute; bottom: 0; width: 125px; height: 2px;margin: 0 auto;right: 0;left:0;background-color: #000;}
-    .split article p {text-align: center; padding: 0 10px;}
-	.copy {padding: 40px 10px 25px; }
+    .split article p {text-align: center;}
+	.copy {padding: 40px 10px; }
     #map {display: none;}
     footer #contact {padding: 20px 10px;
         #footer-logo {display:block;}
@@ -732,7 +751,6 @@ hr {
     #team figure {display: table;}
     #services h3 {margin-top: 10px;}
     #services ul li a {font-size: 18px;}
-    .copy {padding-bottom: 20px;}
     .copy span:last-of-type {display: block; font-size: 5px; visibility: hidden; }
 }
 
@@ -743,8 +761,11 @@ hr {
     #banner article .btn {font-size: 20px;}
     #banner article div {font-size: 16px;}
     #banner article div span {font-size: 18px;}
-    h2 {font-size: 24px;}
-    .split article .btn {padding: 5px 7px; font-size: 22px;}
+    .split article .btn {padding: 10px 20px; font-size: 18px;}
+    header #nav #mobile-btns .phone {font-size: 18px;}
+    #banner article {min-width: 250px;}
+    #quiz .quiz .btn {font-size: 18px;}
+    footer article {margin: 20px;}
 }
  
 
